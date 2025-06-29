@@ -1,16 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Heart, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import SorryMessages from '@/components/SorryMessages';
 import ThankYouMessages from '@/components/ThankYouMessages';
 import MovingNoButton from '@/components/MovingNoButton';
+import BashBashMessages from '@/components/BashBashMessages';
 
 const Index = () => {
   const [currentScreen, setCurrentScreen] = useState('initial');
   const [showSorryMessages, setShowSorryMessages] = useState(false);
   const [showThankYouMessages, setShowThankYouMessages] = useState(false);
+  const [showBashBashMessages, setShowBashBashMessages] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -38,6 +39,10 @@ const Index = () => {
   const handleFinalYes = () => {
     setCurrentScreen('thank-you');
     setShowThankYouMessages(true);
+    // Start bash bash messages after a delay
+    setTimeout(() => {
+      setShowBashBashMessages(true);
+    }, 2000);
   };
 
   const renderSparkles = () => {
@@ -69,7 +74,7 @@ const Index = () => {
               </div>
               
               <h1 className="text-3xl font-bold text-gray-800 animate-fade-in">
-                Hey Friend! 😊
+                Hey Shruti! 😊
               </h1>
               
               <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
@@ -201,6 +206,7 @@ const Index = () => {
         </div>
         
         {showThankYouMessages && <ThankYouMessages />}
+        {showBashBashMessages && <BashBashMessages />}
       </div>
     );
   }
