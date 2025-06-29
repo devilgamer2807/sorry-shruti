@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -39,23 +40,6 @@ const Index = () => {
     setShowThankYouMessages(true);
   };
 
-  const renderFloatingHearts = () => {
-    return Array.from({ length: 15 }).map((_, i) => (
-      <div
-        key={i}
-        className="absolute animate-bounce opacity-70"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          animationDelay: `${Math.random() * 2}s`,
-          animationDuration: `${2 + Math.random() * 2}s`
-        }}
-      >
-        <Heart className="text-pink-400 w-6 h-6 fill-current" />
-      </div>
-    ));
-  };
-
   const renderSparkles = () => {
     return Array.from({ length: 20 }).map((_, i) => (
       <div
@@ -75,7 +59,6 @@ const Index = () => {
   if (currentScreen === 'initial') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 relative overflow-hidden">
-        {renderFloatingHearts()}
         {renderSparkles()}
         
         <div className="flex items-center justify-center min-h-screen p-4">
@@ -91,7 +74,7 @@ const Index = () => {
               
               <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 <p className="text-xl text-gray-700 font-semibold">
-                  गुस्सा हो क्या? 🥺
+                  Are you angry? 🥺
                 </p>
                 
                 <div className="flex gap-4 justify-center">
@@ -99,13 +82,13 @@ const Index = () => {
                     onClick={handleFirstYes}
                     className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg"
                   >
-                    हाँ 😔
+                    Yes 😔
                   </Button>
                   <Button 
                     onClick={handleFirstNo}
                     className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg"
                   >
-                    नहीं 😊
+                    No 😊
                   </Button>
                 </div>
               </div>
@@ -129,7 +112,7 @@ const Index = () => {
                 onClick={handleStopSorry}
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg animate-pulse"
               >
-                Stop करो! 🛑
+                Stop! 🛑
               </Button>
             </div>
           </Card>
@@ -143,24 +126,24 @@ const Index = () => {
   if (currentScreen === 'please-angry') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-orange-200 via-yellow-200 to-pink-200 relative overflow-hidden">
-        {renderFloatingHearts()}
+        {renderSparkles()}
         
         <div className="flex items-center justify-center min-h-screen p-4">
           <Card className="max-w-md w-full p-8 text-center bg-white/90 backdrop-blur-sm shadow-2xl border-0 animate-scale-in">
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">🥺</div>
               <h2 className="text-2xl font-bold text-gray-800 animate-fade-in">
-                गुस्सा कीजिये ना! 😊
+                Please be angry! 😊
               </h2>
               <p className="text-lg text-gray-600 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                आपका गुस्सा भी अच्छा लगता है! 😄
+                Your anger is also nice! 😄
               </p>
               
               <Button 
                 onClick={() => setCurrentScreen('forgive-me')}
                 className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg animate-pulse"
               >
-                अच्छा ठीक है... 😊
+                Okay fine... 😊
               </Button>
             </div>
           </Card>
@@ -179,7 +162,7 @@ const Index = () => {
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">🙏</div>
               <h2 className="text-2xl font-bold text-gray-800 animate-fade-in">
-                माफ़ कर दीजिये प्लीज़! 🥺
+                Please forgive me! 🥺
               </h2>
               
               <div className="flex gap-4 justify-center">
@@ -187,7 +170,7 @@ const Index = () => {
                   onClick={handleFinalYes}
                   className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg"
                 >
-                  हाँ ठीक है 😊
+                  Yes okay 😊
                 </Button>
                 <MovingNoButton />
               </div>
@@ -201,7 +184,6 @@ const Index = () => {
   if (currentScreen === 'thank-you') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 relative overflow-hidden">
-        {renderFloatingHearts()}
         {renderSparkles()}
         
         <div className="flex items-center justify-center min-h-screen p-4">
@@ -209,10 +191,10 @@ const Index = () => {
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">🎉</div>
               <h2 className="text-3xl font-bold text-gray-800 animate-fade-in">
-                हेहे Thank You So Much! 😄
+                Hehe Thank You So Much! 😄
               </h2>
               <p className="text-lg text-gray-600 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                आप बहुत अच्छे हो! 😊✨
+                You are so nice! 😊✨
               </p>
             </div>
           </Card>
