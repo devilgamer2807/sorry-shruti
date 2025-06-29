@@ -5,10 +5,10 @@ const SorryMessages = () => {
   const [messages, setMessages] = useState<Array<{ id: number; x: number; y: number; message: string }>>([]);
   
   const sorryMessages = [
-    "I'm so sorry! 😢", "माफ़ करो ना! 🥺", "Sorry sorry sorry! 💔", 
-    "प्लीज़ माफ़ करो! 🙏", "I feel so bad! 😭", "Sorry मेरी जान! 💕",
-    "मुझसे गलती हुई! 😔", "Please forgive me! 💝", "Sorry बेबी! 👶",
-    "माफ़ी चाहता हूँ! 🤗", "I'm really sorry! 💐", "Sorry पगली! 😘"
+    "I'm so sorry! 😢", "माफ़ करो ना! 🥺", "Sorry sorry sorry! 😔", 
+    "प्लीज़ माफ़ करो! 🙏", "I feel so bad! 😭", "Sorry यार! 😞",
+    "मुझसे गलती हुई! 😔", "Please forgive me! 🙏", "Sorry दोस्त! 😟",
+    "माफ़ी चाहता हूँ! 🤗", "I'm really sorry! 😢", "Sorry buddy! 😔"
   ];
 
   useEffect(() => {

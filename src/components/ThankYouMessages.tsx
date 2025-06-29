@@ -5,10 +5,10 @@ const ThankYouMessages = () => {
   const [messages, setMessages] = useState<Array<{ id: number; x: number; y: number; message: string }>>([]);
   
   const thankYouMessages = [
-    "Thank you! 💕", "शुक्रिया! 🙏", "धन्यवाद! ✨", 
-    "Thank you baby! 💝", "Thanks यार! 😍", "थैंक यू! 🤗",
-    "You're the best! 🌟", "Love you! ❤️", "Thanks cutie! 😘",
-    "आप अच्छी हो! 💖", "Thank you so much! 🎉", "प्यार करती हूँ! 💕"
+    "Thank you! 😊", "शुक्रिया! 🙏", "धन्यवाद! ✨", 
+    "Thank you buddy! 😄", "Thanks यार! 😊", "थैंक यू! 🤗",
+    "You're the best! 🌟", "Thanks a lot! 😄", "Thanks friend! 😊",
+    "आप अच्छे हो! 😊", "Thank you so much! 🎉", "Thanks dude! 😄"
   ];
 
   useEffect(() => {

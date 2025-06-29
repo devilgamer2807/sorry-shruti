@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -83,11 +82,11 @@ const Index = () => {
           <Card className="max-w-md w-full p-8 text-center bg-white/80 backdrop-blur-sm shadow-2xl border-0 animate-scale-in">
             <div className="space-y-6">
               <div className="animate-bounce">
-                <Heart className="w-16 h-16 text-red-500 mx-auto fill-current" />
+                <div className="text-6xl">🤔</div>
               </div>
               
               <h1 className="text-3xl font-bold text-gray-800 animate-fade-in">
-                Hey Beautiful! 💕
+                Hey Friend! 😊
               </h1>
               
               <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
@@ -124,7 +123,7 @@ const Index = () => {
           <Card className="max-w-md w-full p-8 text-center bg-white/90 backdrop-blur-sm shadow-2xl border-0">
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">😢</div>
-              <h2 className="text-2xl font-bold text-gray-800">I'm So Sorry! 💔</h2>
+              <h2 className="text-2xl font-bold text-gray-800">I'm So Sorry! 😔</h2>
               
               <Button 
                 onClick={handleStopSorry}
@@ -151,10 +150,10 @@ const Index = () => {
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">🥺</div>
               <h2 className="text-2xl font-bold text-gray-800 animate-fade-in">
-                गुस्सा कीजिये ना! 💕
+                गुस्सा कीजिये ना! 😊
               </h2>
               <p className="text-lg text-gray-600 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                आपका गुस्सा भी प्यारा लगता है! 😍
+                आपका गुस्सा भी अच्छा लगता है! 😄
               </p>
               
               <Button 
@@ -180,7 +179,7 @@ const Index = () => {
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">🙏</div>
               <h2 className="text-2xl font-bold text-gray-800 animate-fade-in">
-                माफ़ कर दीजिये प्लीज़! 🥺💕
+                माफ़ कर दीजिये प्लीज़! 🥺
               </h2>
               
               <div className="flex gap-4 justify-center">
@@ -210,10 +209,10 @@ const Index = () => {
             <div className="space-y-6">
               <div className="text-6xl animate-bounce">🎉</div>
               <h2 className="text-3xl font-bold text-gray-800 animate-fade-in">
-                हेहे Thank You So Much! 💕
+                हेहे Thank You So Much! 😄
               </h2>
               <p className="text-lg text-gray-600 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                आप सबसे अच्छी हो! 😍✨
+                आप बहुत अच्छे हो! 😊✨
               </p>
             </div>
           </Card>
